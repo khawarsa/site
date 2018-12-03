@@ -6,8 +6,10 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 		<!-- Bootstrap CSS -->
 		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-        <style></style>
+		
 		<title>Javascript Tutrials</title>
+		<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+		
 	</head>
 	<body>
 		<section>
@@ -15,19 +17,281 @@
 				<div class="row">
 					<div class="col-12">
 						<h1 class="text-center mt-5 text-grey">Welcome to javascript</h1>
-					 </div>
-					 <div class="col-md-3">
-					 	<ul class="list-group mt-5">
-							<li class="list-group-item">Lesson 1: Basic variable </li>
-							<li class="list-group-item">Lesson 2: Basic variable </li>
-							<li class="list-group-item">Lesson 3: Basic variable </li>
-							<li class="list-group-item">Lesson 4: Basic variable </li>
-							<li class="list-group-item">Lesson 5: Basic variable </li>
+					</div>
+					<div class="col-md-9">
+						<div class="card mt-5 mb-4">
+							<div class="card-header">
+								<h4>1-Console log Messages</h4>
+							</div>
+							<div class="card-body">
+								<p>var x = "Hello World!";</p>
+								<p>console.log(x)</p>
+							</div>
+						</div>
+						<div class="card mt-5 mb-4">
+							<div class="card-header">
+								<h4>2-Function Scope</h4>
+							</div>
+							<div class="card-body">
+								<p>var message = "in global";</p>
+								<p>	console.log("global: message = " + message);</p>
+								<p>	var a = function () {</p>
+								<p>	var message = "inside a";</p>
+								<p>	console.log("a: message = " + message);</p>
+								<p>	function b () {</p>
+								<p>	console.log("b: message = " + message);</p>
+								<p>	}</p>
+								<p>	b();</p>
+								<p>	}</p>
+								<p>a();</p>
+								
+							</div>
+						</div>
+						<div class="card mt-5 mb-4">
+							<div class="card-header">
+								<h4>3-DataTypes</h4>
+							</div>
+							<div class="card-body">
+								<p>There are total 7 datatypes. One is object type and 6 are primitive types</p>
+								<ol>
+									<li >Object Type</li>
+									<li >Boolean</li>
+									<li >Undefined</li>
+									<li >Null</li>
+									<li >Number</li>
+									<li >String</li>
+									<li >Symbol new in ES6</li>
+								</ol>
+								<div class="card-deck pt-4 ">
+									<div class="row">
+										<div class="col-md-4">
+											<div class="card mt-4">
+												<h5 class="card-title pt-4 text-center">Undefined</h5>
+												<div class="card-body">
+													<p>var word;</p>
+													<p>	console.log(word);</p>
+													<p>	if (word == undefined) {</p>
+													<p>	console.log("word is undefined");</p>
+													<p>	}</p>
+													<p>	word = 5;</p>
+													<p>	if (word == undefined) {</p>
+													<p>	console.log("word is undefined");</p>
+													<p>	}</p>
+													<p>	else {</p>
+													<p>	console.log("word has been defined");</p>
+													<p>}</p>
+												</div>
+											</div>
+										</div>
+										<div class="col-md-4">
+											<div class="card mt-4">
+												<h5 class="card-title pt-4 text-center">String concatination</h5>
+												<div class="card-body">
+													<p>var string = "Hello";</p>
+													<p>string += " World";</p>
+													<p>string = string + " World";</p>
+													<p>console.log(string + "!");</p>
+												</div>
+											</div>
+										</div>
+										<div class="col-md-4">
+											<div class="card mt-4">
+												<h5 class="card-title pt-4 text-center">Regular math operators:<br> +, -, *, /</h5>
+												<div class="card-body">
+													<p>console.log((5 + 4) / 3);</p>
+													<p>console.log(undefined / 5);</p>
+													<p>function test1 (a) {</p>
+													<p>console.log( a / 5);</p>
+													<p>}</p>
+													<p>test1();</p>
+												</div>
+											</div>
+										</div>
+										<div class="col-md-4">
+											<div class="card mt-4">
+												<h5 class="card-title pt-4 text-center">Equality</h5>
+												<div class="card-body">
+													<p>var x = 4, y = 4;</p>
+													<p>if (x == y) {</p>
+													<p>console.log("x=4 is equal to y=4");</p>
+													<p>}</p>
+													<p>x = "4";</p>
+													<p>if (x == y) {</p>
+													<p>console.log("x='4' is equal to y=4");</p>
+													<p>}</p>
+												</div>
+											</div>
+										</div>
+										<div class="col-md-4 mt-4">
+											<div class="card">
+												<h5 class="card-title pt-4 text-center">Strict equality</h5>
+												<div class="card-body">
+													<p>if (x === y) {</p>
+													<p>console.log("Strict: x='4' is equal to y=4");</p>
+													<p>}</p>
+													<p>else {</p>
+													<p>console</p>
+													<p>.log("Strict: x='4' is NOT equal to y=4");</p>
+													<p>}</p>
+												</div>
+											</div>
+										</div>
+										<div class="col-md-4 mt-4">
+											<div class="card">
+												<h5 class="card-title pt-4 text-center">If statement (all false)</h5>
+												<div class="card-body">
+													<p>if ( false || null ||</p>
+													<p>undefined || "" || 0 || NaN) {</p>
+													<p>console.log("This line won't ever execute");</p>
+													<p>}</p>
+													<p>else {</p>
+													<p>console.log ("All false");</p>
+													<p>}</p>
+													<p><strong>Note:</strong> Pass all condition to test whether it is true or false Boolean(null)</p>
+												</div>
+											</div>
+										</div>
+										<div class="col-md-4 mt-4">
+											<div class="card">
+												<h5 class="card-title pt-4 text-center">If statement (all true)</h5>
+												<div class="card-body">
+													<p>if (true &amp;&amp; "hello" &amp;&amp; 1 &amp;&amp; -1 &amp;&amp; "false") {</p>
+													<p>console.log("All true");</p>
+													<p>}</p>
+												</div>
+											</div>
+										</div>
+										<div class="col-md-4 mt-4">
+											<div class="card">
+												<h5 class="card-title pt-4 text-center">Best practice for {}</h5>
+												<div class="card-body">
+													<p>function a()</p>
+													<p>{</p>
+													<p>return</p>
+													<p>{</p>
+													<p>name: "khawar"</p>
+													<p>};</p>
+													<p>}</p>
+													<p>function b() {</p>
+													<p>return {</p>
+													<p>name: "khawar"</p>
+													<p>};</p>
+													<p>}</p>
+													<p>console.log(a());</p>
+													<p>console.log(b());</p>
+												</div>
+											</div>
+										</div>
+										<div class="col-md-4 mt-4">
+											<div class="card">
+												<h5 class="card-title pt-4 text-center">For loop</h5>
+												<div class="card-body">
+													<p>var sum = 0;</p>
+													<p>for (var i = 0; i < 10; i++) {</p>
+													<p>console.log(i);</p>
+													<p>sum = sum + i;</p>
+													<p>}</p>
+													<p>console.log("sum of 0 through 9 is: " + sum);</p>
+												</div>
+											</div>
+										</div>
+										
+									</div>
+									<div class="row">
+										<div class="col-12"></div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="card mt-5 mb-4">
+							<div class="card-header">
+								<h4>4-Default values</h4>
+							</div>
+							<div class="card-body">
+								<p>function orderChickenWith(sideDish) {</p>
+								<p>sideDish = sideDish || "whatever!";</p>
+								<p>console.log("Chicken with " + sideDish);</p>
+								<p>}</p>
+								<p>orderChickenWith("noodles");</p>
+								<p>orderChickenWith();</p>
+							</div>
+						</div>
+						<div class="card mt-5 mb-4">
+							<div class="card-header">
+								<h4>5-Two way creation of object</h4>
+							</div>
+							<div class="card-body">
+								<p> company = new Object();</p>
+								<p>company.name = "Facebook";</p>
+								<p>company.ceo = new Object();</p>
+								<p>company.ceo.firstName = "Mark";</p>
+								<p>company.ceo.favColor = "blue";</p>
+								<p>console.log(company);</p>
+								<p>console.log("Company CEO name is: "</p>
+								<p>+ company.ceo.firstName);</p>
+								<p>console.log(company["name"]);</p>
+								<p>var stockPropName = "stock of company";</p>
+								<p>company[stockPropName] = 110;</p>
+								<p>console.log("Stock price is: " +</p>
+								<p>company[stockPropName]);</p>
+								<p>// Better way: object literal</p>
+								<p>var facebook = {</p>
+								<p>name: "Facebook",</p>
+								<p>ceo: {</p>
+								<p>firstName: "Mark",</p>
+								<p>favColor: "blue"</p>
+								<p>},</p>
+								<p>"stock of company": 110</p>
+								<p>};</p>
+								<p>console.log(facebook.ceo.firstName);</p>
+							</div>
+						</div>
+						<div class="card mt-5 mb-4">
+							<div class="card-header">
+								<h4>6-Functions</h4>
+							</div>
+							<div class="card-body">
+								<p>// Functions are First-Class Data Types</p>
+								<p>// Functions ARE objects</p>
+								<p>function multiply(x, y) {</p>
+								<p>return x * y;</p>
+								<p>}</p>
+								<p>multiply.version = "v.1.0.0";</p>
+								<p>console.log(multiply.version);</p>
+								<p>// Function factory</p>
+								<p>function makeMultiplier(multiplier) {</p>
+								<p>var myFunc = function (x) {</p>
+								<p>return multiplier * x;</p>
+								<p>};</p>
+								<p>return myFunc;</p>
+								<p>}</p>
+								<p>var multiplyBy3 = makeMultiplier(3);</p>
+								<p>console.log(multiplyBy3(10));</p>
+								<p>var doubleAll = makeMultiplier(2);</p>
+								<p>console.log(doubleAll(100));</p>
+								<p>// Passing functions as arguments</p>
+								<p>function doOperationOn(x, operation) {</p>
+								<p>return operation(x);</p>
+								<p>}</p>
+								<p>var result = doOperationOn(5, multiplyBy3);</p>
+								<p>console.log(result);</p>
+								<p>result = doOperationOn(100, doubleAll);</p>
+								<p>console.log(result);</p>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-3">
+						<ul class="list-group mt-5">
+							<li class="list-group-item"> 1-console log  </li>
+							<li class="list-group-item"> 2-Function Scope </li>
+							<li class="list-group-item"> 3-DataTypes  </li>
+							<li class="list-group-item"> 4-Default Values </li>
+							<li class="list-group-item"> 5-Two way creation of object </li>
+							<li class="list-group-item"> 6-Functions </li>
 						</ul>
-					 </div>
-					 <div class="col-md-9">
-					 </div>
-						
+					</div>
+					
+					
 					
 				</div>
 			</div>
