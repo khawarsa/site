@@ -304,6 +304,90 @@
 								<p>console.log(objectb);</p>
 							</div>
 						</div>
+						<div class="card mt-5 mb-4">
+							<div class="card-header">
+								<h4>7-Pass By Value and Pass By Reference</h4>
+							</div>
+							<div class="card-body">
+								<p>// Pass by reference vs by value</p>
+								<p>function changePrimitive(primValue) {</p>
+								<p>console.log("in changePrimitive...");</p>
+								<p>console.log("before:");</p>
+								<p>console.log(primValue);</p>
+								
+								<p>primValue = 5;</p>
+								<p>console.log("after:");</p>
+								<p>console.log(primValue);</p>
+								<p>}</p>
+								<p>var value = 7;</p>
+								<p>changePrimitive(value); // primValue = value</p>
+								<p>console.log("after changePrimitive, orig value:");</p>
+								<p>console.log(value);</p>
+								<p>function changeObject(objValue) {</p>
+								<p>console.log("in changeObject...");</p>
+								<p>console.log("before:");</p>
+								<p>console.log(objValue);</p>
+								
+								<p>objValue.x = 5;</p>
+								<p>console.log("after:");</p>
+								<p>console.log(objValue);</p>
+								<p>}</p>
+								<p>value = { x: 7 };</p>
+								<p>changeObject(value); // objValue = value</p>
+								<p>console.log("after changeObject, orig value:");</p>
+								<p>console.log(value);</p>
+								<p>function add(objectone){</p>
+								<p>objectone.x=20;</p>
+								<p>console.log("in function");</p>
+								<p>console.log(objectone);</p>
+								<p>}</p>
+								<p>var obj= {x:10};</p>
+								<p>console.log("before calling");</p>
+								<p>console.log(obj);</p>
+								<p>add(obj);</p>
+								<p>console.log("after exit");</p>
+								<p>console.log(obj);</p>
+							</div>
+						</div>
+						<div class="card mt-5 mb-4">
+							<div class="card-header">
+								<h4>8-Function constructors</h4>
+							</div>
+							<div class="card-body">
+								<p>// Function constructors</p>
+								<p>function Square (length){</p>
+								<p>this.length=length;</p>
+								<p>}</p>
+								<p>Square.prototype.getArea=</p>
+								<p>function (){</p>
+								<p>return this.length* this.length;</p>
+								<p>};</p>
+								<p>var mysquare=new Square(10);</p>
+								<p>console.log(mysquare.getArea());</p>
+							</div>
+						</div>
+						<div class="card mt-5 mb-4">
+							<div class="card-header">
+								<h4>9-Object literals and "this"</h4>
+							</div>
+							<div class="card-body">
+								<p>// Object literals and "this"</p>
+								<p>var literalCircle = {</p>
+								<p>radius: 10,</p>
+								<p>getArea: function () {</p>
+								<p>var self = this;</p>
+								<p>console.log(this);</p>
+								<p>var increaseRadius = function () {</p>
+								<p>self.radius = 20;</p>
+								<p>};</p>
+								<p>increaseRadius();</p>
+								<p>console.log(this.radius);</p>
+								<p>return Math.PI * Math.pow(this.radius, 2);</p>
+								<p>}</p>
+								<p>};</p>
+								<p>console.log(literalCircle.getArea());</p>
+							</div>
+						</div>
 					</div>
 					<div class="col-md-3">
 						<ul class="list-group mt-5">
@@ -314,6 +398,10 @@
 							<li class="list-group-item"> 5-Two way creation of object </li>
 							<li class="list-group-item"> 6-Functions </li>
 							<li class="list-group-item"> 7-Pass by value and reference</li>
+							<li class="list-group-item"> 8-Function constructors</li>
+							<li class="list-group-item"> 9-Object literals and "this"</li>
+							
+							
 						</ul>
 					</div>
 					

@@ -222,5 +222,83 @@ console.log(objecta);
 console.log(objectb);
 
  
+// Pass by reference vs by value
+function changePrimitive(primValue) {
+  console.log("in changePrimitive...");
+  console.log("before:");
+  console.log(primValue);
+  
+  primValue = 5;
+  console.log("after:");
+  console.log(primValue);
+}
+
+var value = 7;
+changePrimitive(value); // primValue = value
+console.log("after changePrimitive, orig value:");
+console.log(value);
 
 
+
+function changeObject(objValue) {
+  console.log("in changeObject...");
+  console.log("before:");
+  console.log(objValue);
+  
+  objValue.x = 5;
+  console.log("after:");
+  console.log(objValue);
+}
+
+value = { x: 7 };
+changeObject(value); // objValue = value
+console.log("after changeObject, orig value:");
+console.log(value);
+
+
+function add(objectone){
+objectone.x=20;
+console.log("in function");
+console.log(objectone);
+
+}
+var obj= {x:10};
+console.log("before calling");
+console.log(obj);
+add(obj);
+console.log("after exit");
+console.log(obj);
+
+
+
+// Function constructors
+function Square (length){
+	this.length=length;
+}
+Square.prototype.getArea=
+function (){
+  return this.length* this.length;
+};
+
+var mysquare=new Square(10);
+console.log(mysquare.getArea());
+
+
+// Object literals and "this"
+var literalCircle = {
+  radius: 10,
+
+  getArea: function () {
+    var self = this;
+    console.log(this);
+    var increaseRadius = function () {
+      self.radius = 20;
+    };
+    increaseRadius();
+    console.log(this.radius);
+
+    return Math.PI * Math.pow(this.radius, 2);
+  }
+};
+
+ console.log(literalCircle.getArea());
