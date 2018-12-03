@@ -63,7 +63,7 @@
 									<li >Symbol new in ES6</li>
 								</ol>
 								<div class="card-deck pt-4 ">
-									<div class="row">
+									<div class="row no-gutters">
 										<div class="col-md-4">
 											<div class="card mt-4">
 												<h5 class="card-title pt-4 text-center">Undefined</h5>
@@ -279,6 +279,31 @@
 								<p>console.log(result);</p>
 							</div>
 						</div>
+						<div class="card mt-5 mb-4">
+							<div class="card-header">
+								<h4>7-Pass By Value and Pass By Reference</h4>
+							</div>
+							<div class="card-body">
+								<p>// Copy by Reference vs by Value</p>
+								<p>var numbera = 7;</p>
+								<p>var numberb = numbera;</p>
+								<p>console.log("a: " + numbera);</p>
+								<p>console.log("b: " + numberb);</p>
+								<p>numberb = 5;</p>
+								<p>console.log("after number b update:");</p>
+								<p>console.log("numbera: " + numbera);</p>
+								<p>console.log("numberb: " + numberb);</p>
+								<p>var objecta = { valuex: 100 };</p>
+								<p>var objectb = objecta;</p>
+								<p>console.log("passs by value:");</p>
+								<p>console.log(objecta);</p>
+								<p>console.log(objectb);</p>
+								<p>objectb.x = 5;</p>
+								<p>console.log("after objectb.x update:");</p>
+								<p>console.log(objecta);</p>
+								<p>console.log(objectb);</p>
+							</div>
+						</div>
 					</div>
 					<div class="col-md-3">
 						<ul class="list-group mt-5">
@@ -288,6 +313,7 @@
 							<li class="list-group-item"> 4-Default Values </li>
 							<li class="list-group-item"> 5-Two way creation of object </li>
 							<li class="list-group-item"> 6-Functions </li>
+							<li class="list-group-item"> 7-Pass by value and reference</li>
 						</ul>
 					</div>
 					

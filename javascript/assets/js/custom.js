@@ -195,3 +195,32 @@ function makeMultiplier(multiplier) {
   console.log(result);
   result = doOperationOn(100, doubleAll);
  console.log(result);
+
+
+ // Copy by Reference vs by Value
+var numbera = 7;
+var numberb = numbera;
+console.log("a: " + numbera);
+console.log("b: " + numberb);
+
+numberb = 5;
+console.log("after number b update:");
+console.log("numbera: " + numbera);
+console.log("numberb: " + numberb);
+
+
+
+var objecta = { valuex: 100 };
+var objectb = objecta;
+console.log("passs by value:");
+console.log(objecta);
+console.log(objectb);
+
+objectb.x = 5;
+console.log("after objectb.x update:");
+console.log(objecta);
+console.log(objectb);
+
+ 
+
+
