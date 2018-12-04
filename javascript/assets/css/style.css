@@ -7,3 +7,25 @@
 	background: transparent;
 	border: 0;
 }
+:not(pre) > code[class*="language-"], pre[class*="language-"] {
+    background: transparent !important;
+}
+.token.comment, .token.prolog, .token.doctype, .token.cdata {
+    color:#333 !important;
+    text-shadow:none !important;
+}
+.token.operator, 
+.token.entity, 
+.token.url, 
+.language-css 
+.token.string, 
+.style .token.string {
+   
+    background: transparent !important;
+}
+code[class*="language-"], pre[class*="language-"] {
+    color: black;
+     text-shadow: none !important;
+     tab-size: 0 !important;
+     font-size: 18px !important;
+}

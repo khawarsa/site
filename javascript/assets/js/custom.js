@@ -302,3 +302,122 @@ var literalCircle = {
 };
 
  console.log(literalCircle.getArea());
+
+ // Arrays
+var array = new Array();
+array[0] = "khawar";
+array[1] = 2;
+array[2] = function (name) {
+  console.log("Hello " + name);
+};
+array[3] = {course: " HTML, CSS & JS"};
+
+ console.log(array);
+array[2](array[0]);
+console.log(array[3].course);
+
+
+// Short hand array creation
+var names = ["Zubair", "khawar", "Rizwan"];
+console.log(names);
+
+for (var i = 0; i < names.length; i++) {
+  console.log("Hello " + names[i]);
+}
+
+names[100] = "Usman";
+for (var i = 0; i < names.length; i++) {
+  console.log("Hello " + names[i]);
+}
+
+ var names2 = ["khawar", "Rizwan", "Hamood"];
+
+var myObj = {
+  name: "khawar",
+  course: "HTML/CSS/JS",
+  platform: "Red Cubez"
+};
+for (var prop in myObj) {
+  console.log(prop + ": " + myObj[prop]);
+}
+
+for (var name in names2) {
+  console.log("Hello " + names2[name]);
+}
+
+names2.greeting = "Hi!";
+
+for (var name in names2) {
+  console.log("Hello " + names2[name]);
+}
+
+
+// Closures
+function makeMultiplier (multiplier) {
+  // var multiplier = 2;
+  function b() {
+    console.log("Multiplier is: " + multiplier);
+  }
+  b();
+
+
+  return (
+      function (x) {
+        return multiplier * x;
+      }
+
+    );
+}
+
+var doubleAll = makeMultiplier(2);
+console.log(doubleAll(10)); // its own exec env
+
+ 
+
+ // Fake Namespace
+  var khawarGreeter = {};
+  khawarGreeter.name = "khawar";
+  var greeting = "Hello ";
+  khawarGreeter.sayHello = function () {
+    console.log(greeting + khawarGreeter.name);
+  }
+
+
+  var RizwanGreeter = {};
+  RizwanGreeter.name = "Rizwan";
+  var greeting = "Hi ";
+ RizwanGreeter.sayHi = function () {
+    console.log(greeting + RizwanGreeter.name);
+  }
+
+khawarGreeter.sayHello();
+RizwanGreeter.sayHi();
+
+ // IIFEs Immediate invoked function Expressions
+
+ (function (windoe){
+
+ var khawarGreeter = {};
+  khawarGreeter.name = "khawar";
+  var greeting = "Hello ";
+  khawarGreeter.sayHello = function () {
+    console.log(greeting + khawarGreeter.name);
+  }
+
+  window.khawarGreeter =khawarGreeter;
+
+ })(window);
+
+(function(window){
+ var RizwanGreeter = {};
+  RizwanGreeter.name = "Rizwan";
+  var greeting = "Hi ";
+  RizwanGreeter.sayHi = function () {
+    console.log(greeting + RizwanGreeter.name);
+  }
+
+  window.RizwanGreeter = RizwanGreeter;
+})(window);
+
+ khawarGreeter.sayHello();
+ RizwanGreeter.sayHi();
