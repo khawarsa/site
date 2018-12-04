@@ -9,6 +9,7 @@
 		
 		<title>Javascript Tutrials</title>
 		<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+		<link rel="stylesheet" type="text/css" href="assets/css/prism.css">
 		
 	</head>
 	<body>
@@ -19,40 +20,48 @@
 						<h1 class="text-center mt-5 text-grey">Welcome to javascript</h1>
 					</div>
 					<div class="col-md-9">
-						<div class="card mt-5 mb-4">
+						<div class="card mt-5 mb-4" id="first">
 							<div class="card-header">
-								<h4>1-Console log Messages</h4>
+								<h4 class="pl-3 pt-5">1-Console log Messages</h4>
 							</div>
 							<div class="card-body">
-								<p>var x = "Hello World!";</p>
-								<p>console.log(x)</p>
+								<pre>
+									<code class="language-javascript">
+									var x = "Hello World!";
+									console.log(x)
+									</code>
+								</pre>
 							</div>
 						</div>
-						<div class="card mt-5 mb-4">
+						<div class="card mt-5 mb-4" id="two">
 							<div class="card-header">
-								<h4>2-Function Scope</h4>
+								<h4 class="pl-3 pt-5">2-Function Scope</h4>
 							</div>
 							<div class="card-body">
-								<p>var message = "in global";</p>
-								<p>	console.log("global: message = " + message);</p>
-								<p>	var a = function () {</p>
-								<p>	var message = "inside a";</p>
-								<p>	console.log("a: message = " + message);</p>
-								<p>	function b () {</p>
-								<p>	console.log("b: message = " + message);</p>
-								<p>	}</p>
-								<p>	b();</p>
-								<p>	}</p>
-								<p>a();</p>
+								<pre>
+									<code class="language-javascript">
+									var message = "in global";
+									console.log("global: message = " + message);
+									var a = function () {
+									var message = "inside a";
+									console.log("a: message = " + message);
+									function b () {
+									console.log("b: message = " + message);
+									}
+									b();
+									}
+									a();
+									</code>
+								</pre>
 								
 							</div>
 						</div>
-						<div class="card mt-5 mb-4">
+						<div class="card mt-5 mb-4" id="three">
 							<div class="card-header">
-								<h4>3-DataTypes</h4>
+								<h4  class="pl-3 pt-5">3-DataTypes</h4>
 							</div>
 							<div class="card-body">
-								<p>There are total 7 datatypes. One is object type and 6 are primitive types</p>
+								<p class="pl-4">There are total 7 datatypes. One is object type and 6 are primitive types</p>
 								<ol>
 									<li >Object Type</li>
 									<li >Boolean</li>
@@ -62,360 +71,587 @@
 									<li >String</li>
 									<li >Symbol new in ES6</li>
 								</ol>
-								<div class="card-deck pt-4 ">
-									<div class="row no-gutters">
-										<div class="col-md-4">
-											<div class="card mt-4">
-												<h5 class="card-title pt-4 text-center">Undefined</h5>
-												<div class="card-body">
-													<p>var word;</p>
-													<p>	console.log(word);</p>
-													<p>	if (word == undefined) {</p>
-													<p>	console.log("word is undefined");</p>
-													<p>	}</p>
-													<p>	word = 5;</p>
-													<p>	if (word == undefined) {</p>
-													<p>	console.log("word is undefined");</p>
-													<p>	}</p>
-													<p>	else {</p>
-													<p>	console.log("word has been defined");</p>
-													<p>}</p>
-												</div>
-											</div>
-										</div>
-										<div class="col-md-4">
-											<div class="card mt-4">
-												<h5 class="card-title pt-4 text-center">String concatination</h5>
-												<div class="card-body">
-													<p>var string = "Hello";</p>
-													<p>string += " World";</p>
-													<p>string = string + " World";</p>
-													<p>console.log(string + "!");</p>
-												</div>
-											</div>
-										</div>
-										<div class="col-md-4">
-											<div class="card mt-4">
-												<h5 class="card-title pt-4 text-center">Regular math operators:<br> +, -, *, /</h5>
-												<div class="card-body">
-													<p>console.log((5 + 4) / 3);</p>
-													<p>console.log(undefined / 5);</p>
-													<p>function test1 (a) {</p>
-													<p>console.log( a / 5);</p>
-													<p>}</p>
-													<p>test1();</p>
-												</div>
-											</div>
-										</div>
-										<div class="col-md-4">
-											<div class="card mt-4">
-												<h5 class="card-title pt-4 text-center">Equality</h5>
-												<div class="card-body">
-													<p>var x = 4, y = 4;</p>
-													<p>if (x == y) {</p>
-													<p>console.log("x=4 is equal to y=4");</p>
-													<p>}</p>
-													<p>x = "4";</p>
-													<p>if (x == y) {</p>
-													<p>console.log("x='4' is equal to y=4");</p>
-													<p>}</p>
-												</div>
-											</div>
-										</div>
-										<div class="col-md-4 mt-4">
-											<div class="card">
-												<h5 class="card-title pt-4 text-center">Strict equality</h5>
-												<div class="card-body">
-													<p>if (x === y) {</p>
-													<p>console.log("Strict: x='4' is equal to y=4");</p>
-													<p>}</p>
-													<p>else {</p>
-													<p>console</p>
-													<p>.log("Strict: x='4' is NOT equal to y=4");</p>
-													<p>}</p>
-												</div>
-											</div>
-										</div>
-										<div class="col-md-4 mt-4">
-											<div class="card">
-												<h5 class="card-title pt-4 text-center">If statement (all false)</h5>
-												<div class="card-body">
-													<p>if ( false || null ||</p>
-													<p>undefined || "" || 0 || NaN) {</p>
-													<p>console.log("This line won't ever execute");</p>
-													<p>}</p>
-													<p>else {</p>
-													<p>console.log ("All false");</p>
-													<p>}</p>
-													<p><strong>Note:</strong> Pass all condition to test whether it is true or false Boolean(null)</p>
-												</div>
-											</div>
-										</div>
-										<div class="col-md-4 mt-4">
-											<div class="card">
-												<h5 class="card-title pt-4 text-center">If statement (all true)</h5>
-												<div class="card-body">
-													<p>if (true &amp;&amp; "hello" &amp;&amp; 1 &amp;&amp; -1 &amp;&amp; "false") {</p>
-													<p>console.log("All true");</p>
-													<p>}</p>
-												</div>
-											</div>
-										</div>
-										<div class="col-md-4 mt-4">
-											<div class="card">
-												<h5 class="card-title pt-4 text-center">Best practice for {}</h5>
-												<div class="card-body">
-													<p>function a()</p>
-													<p>{</p>
-													<p>return</p>
-													<p>{</p>
-													<p>name: "khawar"</p>
-													<p>};</p>
-													<p>}</p>
-													<p>function b() {</p>
-													<p>return {</p>
-													<p>name: "khawar"</p>
-													<p>};</p>
-													<p>}</p>
-													<p>console.log(a());</p>
-													<p>console.log(b());</p>
-												</div>
-											</div>
-										</div>
-										<div class="col-md-4 mt-4">
-											<div class="card">
-												<h5 class="card-title pt-4 text-center">For loop</h5>
-												<div class="card-body">
-													<p>var sum = 0;</p>
-													<p>for (var i = 0; i < 10; i++) {</p>
-													<p>console.log(i);</p>
-													<p>sum = sum + i;</p>
-													<p>}</p>
-													<p>console.log("sum of 0 through 9 is: " + sum);</p>
-												</div>
-											</div>
-										</div>
+								<div class="card mt-4 bg-white">
+									<h5 class="pl-3 pt-5">Undefined</h5>
+									<div class="card-body">
+										<pre>
+											<code class="language-javascript">
+											var word;
+											console.log(word);
+											if (word == undefined) {
+											console.log("word is undefined");
+											}
+											word = 5;
+											if (word == undefined) {
+											console.log("word is undefined");
+											}
+											else {
+											console.log("word has been defined");
+											}
+											</code>
+										</pre>
+									</div>
+								</div>
+								<div class="card mt-4 bg-white">
+									<h5 class="pl-3 pt-5">String concatination</h5>
+									<div class="card-body">
+										<pre>
+											<code class="language-javascript">
+											var string = "Hello";
+											string += " World";
+											string = string + " World";
+											console.log(string + "!");
+											</code>
+										</pre>
+									</div>
+								</div>
+								<div class="card mt-4 bg-white">
+									<h5 class="pl-3 pt-5">Regular math operators: +, -, *, /</h5>
+									<div class="card-body">
+										<pre>
+											<code class="language-javascript">
+											console.log((5 + 4) / 3);
+											console.log(undefined / 5);
+											function test1 (a) {
+											console.log( a / 5);
+											}
+											test1();
+											</code>
+										</pre>
+									</div>
+								</div>
+								<div class="card mt-4 bg-white">
+									<h5 class="pl-3 pt-5">Equality</h5>
+									<div class="card-body">
+										<pre>
+											<code class="language-javascript">
+											var x = 4, y = 4;
+											if (x == y) {
+											console.log("x=4 is equal to y=4");
+											}
+											x = "4";
+											if (x == y) {
+											console.log("x='4' is equal to y=4");
+											}
+											</code>
+										</pre>
+									</div>
+								</div>
+								<div class="card mt-4 bg-white">
+									<h5 class="pl-3 pt-5">Strict equality</h5>
+									<div class="card-body">
+										<pre>
+											<code class="language-javascript">
+											if (x === y) {
+											console.log("Strict: x='4' is equal to y=4");
+											}
+											else {
+											console
+											.log("Strict: x='4' is NOT equal to y=4");
+											}
+											</code>
+										</pre>
+									</div>
+								</div>
+								<div class="card mt-4 bg-white">
+									<h5 class="pl-3 pt-5">If statement (all false)</h5>
+									<div class="card-body">
+										<pre>
+											<code class="language-javascript">
+											if ( false || null ||
+											undefined || "" || 0 || NaN) {
+											console.log("This line won't ever execute");
+											}
+											else {
+											console.log ("All false");
+											}
+											</code>
+										</pre>
+										<p><strong>Note:</strong> Pass all condition to test whether it is true or false Boolean(null)</p>
+										
 										
 									</div>
-									<div class="row">
-										<div class="col-12"></div>
+								</div>
+								<div class="card mt-4 bg-white">
+									<h5 class="pl-3 pt-5">If statement (all true)</h5>
+									<div class="card-body">
+										<pre>
+											<code class="language-javascript">
+											if (true &amp;&amp; "hello" &amp;&amp; 1 &amp;&amp; -1 &amp;&amp; "false") {
+											console.log("All true");
+											}
+											</code>
+										</pre>
+									</div>
+								</div>
+								<div class="card mt-4 bg-white">
+									<h5 class="pl-3 pt-5">Best practice for {}</h5>
+									<div class="card-body">
+										<pre>
+											<code class="language-javascript">
+											function a()
+											{
+											return
+											{
+											name: "khawar"
+											};
+											}
+											function b() {
+											return {
+											name: "khawar"
+											};
+											}
+											console.log(a());
+											console.log(b());
+											</code>
+										</pre>
+									</div>
+								</div>
+								<div class="card mt-4 bg-white">
+									<h5 class="pl-3 pt-5">For loop</h5>
+									<div class="card-body">
+										<pre>
+											<code class="language-javascript">
+											var sum = 0;
+											for (var i = 0; i < 10; i++) {
+											console.log(i);
+											sum = sum + i;
+											}
+											console.log("sum of 0 through 9 is: " + sum);
+											</code>
+										</pre>
 									</div>
 								</div>
 							</div>
 						</div>
-						<div class="card mt-5 mb-4">
+						<div class="card mt-5 mb-4" id="four">
 							<div class="card-header">
-								<h4>4-Default values</h4>
+								<h4  class="pt-4">4-Default values</h4>
 							</div>
 							<div class="card-body">
-								<p>function orderChickenWith(sideDish) {</p>
-								<p>sideDish = sideDish || "whatever!";</p>
-								<p>console.log("Chicken with " + sideDish);</p>
-								<p>}</p>
-								<p>orderChickenWith("noodles");</p>
-								<p>orderChickenWith();</p>
+								<pre>
+									<code class="language-javascript">
+									function orderChickenWith(sideDish) {
+									sideDish = sideDish || "whatever!";
+									console.log("Chicken with " + sideDish);
+									}
+									orderChickenWith("noodles");
+									orderChickenWith();
+									</code>
+								</pre>
 							</div>
 						</div>
-						<div class="card mt-5 mb-4">
+						<div class="card mt-5 mb-4" id="five">
 							<div class="card-header">
-								<h4>5-Two way creation of object</h4>
+								<h4  class="pt-4">5-Two way creation of object</h4>
 							</div>
 							<div class="card-body">
-								<p> company = new Object();</p>
-								<p>company.name = "Facebook";</p>
-								<p>company.ceo = new Object();</p>
-								<p>company.ceo.firstName = "Mark";</p>
-								<p>company.ceo.favColor = "blue";</p>
-								<p>console.log(company);</p>
-								<p>console.log("Company CEO name is: "</p>
-								<p>+ company.ceo.firstName);</p>
-								<p>console.log(company["name"]);</p>
-								<p>var stockPropName = "stock of company";</p>
-								<p>company[stockPropName] = 110;</p>
-								<p>console.log("Stock price is: " +</p>
-								<p>company[stockPropName]);</p>
-								<p>// Better way: object literal</p>
-								<p>var facebook = {</p>
-								<p>name: "Facebook",</p>
-								<p>ceo: {</p>
-								<p>firstName: "Mark",</p>
-								<p>favColor: "blue"</p>
-								<p>},</p>
-								<p>"stock of company": 110</p>
-								<p>};</p>
-								<p>console.log(facebook.ceo.firstName);</p>
+								<pre>
+									<code class="language-javascript">
+									company = new Object();
+									company.name = "Facebook";
+									company.ceo = new Object();
+									company.ceo.firstName = "Mark";
+									company.ceo.favColor = "blue";
+									console.log(company);
+									console.log("Company CEO name is: "
+									+ company.ceo.firstName);
+									console.log(company["name"]);
+									var stockPropName = "stock of company";
+									company[stockPropName] = 110;
+									console.log("Stock price is: " +
+									company[stockPropName]);
+									// Better way: object literal
+									var facebook = {
+									name: "Facebook",
+									ceo: {
+									firstName: "Mark",
+									favColor: "blue"
+									},
+									"stock of company": 110
+									};
+									console.log(facebook.ceo.firstName);
+									</code>
+								</div>
+							</div>
+							<div class="card mt-5 mb-4" id="six">
+								<div class="card-header">
+									<h4  class="pt-4">6-Functions</h4>
+								</div>
+								<div class="card-body">
+									<pre>
+										<code class="language-javascript">
+										// Functions are First-Class Data Types
+										// Functions ARE objects
+										function multiply(x, y) {
+										return x * y;
+										}
+										multiply.version = "v.1.0.0";
+										console.log(multiply.version);
+										// Function factory
+										function makeMultiplier(multiplier) {
+										var myFunc = function (x) {
+										return multiplier * x;
+										};
+										return myFunc;
+										}
+										var multiplyBy3 = makeMultiplier(3);
+										console.log(multiplyBy3(10));
+										var doubleAll = makeMultiplier(2);
+										console.log(doubleAll(100));
+										// Passing functions as arguments
+										function doOperationOn(x, operation) {
+										return operation(x);
+										}
+										var result = doOperationOn(5, multiplyBy3);
+										console.log(result);
+										result = doOperationOn(100, doubleAll);
+										console.log(result);
+										</code>
+									</pre>
+								</div>
+							</div>
+							<div class="card mt-5 mb-4" id="seven">
+								<div class="card-header">
+									<h4  class="pt-4">7-Pass By Value and Pass By Reference</h4>
+								</div>
+								<div class="card-body">
+									<pre>
+										<code class="language-javascript">
+										// Copy by Reference vs by Value
+										var numbera = 7;
+										var numberb = numbera;
+										console.log("a: " + numbera);
+										console.log("b: " + numberb);
+										numberb = 5;
+										console.log("after number b update:");
+										console.log("numbera: " + numbera);
+										console.log("numberb: " + numberb);
+										var objecta = { valuex: 100 };
+										var objectb = objecta;
+										console.log("passs by value:");
+										console.log(objecta);
+										console.log(objectb);
+										objectb.x = 5;
+										console.log("after objectb.x update:");
+										console.log(objecta);
+										console.log(objectb);
+										</code>
+									</pre>
+								</div>
+							</div>
+							<div class="card mt-5 mb-4" id="eight">
+								<div class="card-header">
+									<h4  class="pt-4">8-Function Examples</h4>
+								</div>
+								<div class="card-body">
+									<pre>
+										<code class="language-javascript">
+										// Pass by reference vs by value
+										function changePrimitive(primValue) {
+										console.log("in changePrimitive...");
+										console.log("before:");
+										console.log(primValue);
+										
+										primValue = 5;
+										console.log("after:");
+										console.log(primValue);
+										}
+										var value = 7;
+										changePrimitive(value); // primValue = value
+										console.log("after changePrimitive, orig value:");
+										console.log(value);
+										function changeObject(objValue) {
+										console.log("in changeObject...");
+										console.log("before:");
+										console.log(objValue);
+										
+										objValue.x = 5;
+										console.log("after:");
+										console.log(objValue);
+										}
+										value = { x: 7 };
+										changeObject(value); // objValue = value
+										console.log("after changeObject, orig value:");
+										console.log(value);
+										function add(objectone){
+										objectone.x=20;
+										console.log("in function");
+										console.log(objectone);
+										}
+										var obj= {x:10};
+										console.log("before calling");
+										console.log(obj);
+										add(obj);
+										console.log("after exit");
+										console.log(obj);
+										</code>
+									</pre>
+								</div>
+							</div>
+							<div class="card mt-5 mb-4" id="nine">
+								<div class="card-header">
+									<h4  class="pt-4">9-Function constructors</h4>
+								</div>
+								<div class="card-body">
+									<pre>
+										<code class="language-javascript">
+										// Function constructors
+										function Square (length){
+										this.length=length;
+										}
+										Square.prototype.getArea=
+										function (){
+										return this.length* this.length;
+										};
+										var mysquare=new Square(10);
+										console.log(mysquare.getArea());
+										</code>
+									</pre>
+								</div>
+							</div>
+							<div class="card mt-5 mb-4" id="ten">
+								<div class="card-header">
+									<h4  class="pt-4">10-Object literals and "this"</h4>
+								</div>
+								<div class="card-body">
+									<pre>
+										<code class="language-javascript">
+										// Object literals and "this"
+										var literalCircle = {
+										radius: 10,
+										getArea: function () {
+										var self = this;
+										console.log(this);
+										var increaseRadius = function () {
+										self.radius = 20;
+										};
+										increaseRadius();
+										console.log(this.radius);
+										return Math.PI * Math.pow(this.radius, 2);
+										}
+										};
+										console.log(literalCircle.getArea());
+										</code>
+									</pre>
+								</div>
+							</div>
+							<div class="card mt-5 mb-4" id="eleven">
+								<div class="card-header">
+									<h4  class="pt-4">11-Arrays</h4>
+								</div>
+								<div class="card-body">
+									<pre>
+										<code class="language-javascript">
+										 // Arrays
+										var array = new Array();
+										array[0] = "khawar";
+										array[1] = 2;
+										array[2] = function (name) {
+										  console.log("Hello " + name);
+										};
+										array[3] = {course: " HTML, CSS & JS"};
+										console.log(array);
+										array[2](array[0]);
+										console.log(array[3].course);
+										// Short hand array creation
+										var names = ["Muhammad", "khawar", "khawar"];
+										console.log(names);
+										for (var i = 0; i < names.length; i++) {
+										  console.log("Hello " + names[i]);
+										}
+										names[100] = "Usman";
+										for (var i = 0; i < names.length; i++) {
+										  console.log("Hello " + names[i]);
+										}
+										var names2 = ["khawar", "Rizwan", "Hamood"];
+										var myObj = {
+										  name: "khawar",
+										  course: "HTML/CSS/JS",
+										  platform: "Red Cubez"
+										};
+										for (var prop in myObj) {
+										  console.log(prop + ": " + myObj[prop]);
+										}
+										for (var name in names2) {
+										  console.log("Hello " + names2[name]);
+										}
+										names2.greeting = "Hi!";
+										for (var name in names2) {
+										  console.log("Hello " + names2[name]);
+										}
+										</code>
+									</pre>
+								</div>
+							</div>
+							<div class="card mt-5 mb-4" id="twelve">
+								<div class="card-header">
+									<h4  class="pt-4">12-Closures</h4>
+								</div>
+								<div class="card-body">
+									<pre>
+										<code class="language-javascript">
+										 // Closures
+										function makeMultiplier (multiplier) {
+										  // var multiplier = 2;
+										  function b() {
+										    console.log("Multiplier is: " + multiplier);
+										  }
+										  b();
+										  return (
+										      function (x) {
+										        return multiplier * x;
+										      }
+										    );
+										}
+										var doubleAll = makeMultiplier(2);
+										console.log(doubleAll(10)); // its own exec env
+										</code>
+									</pre>
+								</div>
+							</div>
+							<div class="card mt-5 mb-4" id="thirteen">
+								<div class="card-header">
+									<h4  class="pt-4">12-Fake Namespace</h4>
+								</div>
+								<div class="card-body">
+									<pre>
+										<code class="language-javascript">
+										 // Fake Namespace
+										  var khawarGreeter = {};
+										  khawarGreeter.name = "khawar";
+										  var greeting = "Hello ";
+										  khawarGreeter.sayHello = function () {
+										    console.log(greeting + khawarGreeter.name);
+										  }
+										  var RizwanGreeter = {};
+										  RizwanGreeter.name = "Rizwan";
+										  var greeting = "Hi ";
+										 RizwanGreeter.sayHi = function () {
+										    console.log(greeting + RizwanGreeter.name);
+										  }
+										khawarGreeter.sayHello();
+										RizwanGreeter.sayHi();
+										</code>
+									</pre>
+								</div>
+							</div>
+							<div class="card mt-5 mb-4" id="fourteen">
+								<div class="card-header">
+									<h4  class="pt-4">12- IIFEs Immediate invoked function Expressions</h4>
+								</div>
+								<div class="card-body">
+									<pre>
+										<code class="language-javascript">
+										 // IIFEs Immediate invoked function Expressions
+										 (function (windoe){
+										 var khawarGreeter = {};
+										  khawarGreeter.name = "khawar";
+										  var greeting = "Hello ";
+										  khawarGreeter.sayHello = function () {
+										    console.log(greeting + khawarGreeter.name);
+										  }
+										  window.khawarGreeter =khawarGreeter;
+										 })(window);
+										(function(window){
+										 var RizwanGreeter = {};
+										  RizwanGreeter.name = "Rizwan";
+										  var greeting = "Hi ";
+										  RizwanGreeter.sayHi = function () {
+										    console.log(greeting + RizwanGreeter.name);
+										  }
+										  window.RizwanGreeter = RizwanGreeter;
+										})(window);
+										 khawarGreeter.sayHello();
+										 RizwanGreeter.sayHi();
+										</code>
+									</pre>
+								</div>
+							</div>
+							<div class="card mt-5 mb-4" id="fifteen">
+								<div class="card-header">
+									<h4  class="pt-4">15-DOM Manipulation</h4>
+								</div>
+								<div class="card-body">
+									<pre>
+										<code class="language-html">
+									 	 h1 id="title"Lecture 53 /h1
+												  p Say hello to 
+													    input id="name" type="text"
+													    button onclick="sayHello();"
+													      Say it!
+													    /button
+												  /p
+												  div id="content"/div
+												script src="js/script.js"/script
+											 
+										   
+										</code>
+									</pre>
+									<pre>
+										<code class="language-javascript">
+										 // DOM manipulation
+										// console.log(document.getElementById("title"));
+										// console.log(document instanceof HTMLDocument);
+										function sayHello () {
+										  var name =
+										   document.getElementById("name").value;
+										   var message = "<h2>Hello " + name + "!</h2>";
+										  // document
+										  //   .getElementById("content")
+										  //   .textContent = message;
+										  document
+										    .getElementById("content")
+										    .innerHTML = message;
+										  if (name === "student") {
+										    var title = 
+										      document
+										        .querySelector("#title")
+										        .textContent;
+										    title += " & Lovin' it!";
+										    document
+										        .querySelector("h1")
+										        .textContent = title;
+										  }
+										}
+										</code>
+									</pre>
+								</div>
 							</div>
 						</div>
-						<div class="card mt-5 mb-4">
-							<div class="card-header">
-								<h4>6-Functions</h4>
-							</div>
-							<div class="card-body">
-								<p>// Functions are First-Class Data Types</p>
-								<p>// Functions ARE objects</p>
-								<p>function multiply(x, y) {</p>
-								<p>return x * y;</p>
-								<p>}</p>
-								<p>multiply.version = "v.1.0.0";</p>
-								<p>console.log(multiply.version);</p>
-								<p>// Function factory</p>
-								<p>function makeMultiplier(multiplier) {</p>
-								<p>var myFunc = function (x) {</p>
-								<p>return multiplier * x;</p>
-								<p>};</p>
-								<p>return myFunc;</p>
-								<p>}</p>
-								<p>var multiplyBy3 = makeMultiplier(3);</p>
-								<p>console.log(multiplyBy3(10));</p>
-								<p>var doubleAll = makeMultiplier(2);</p>
-								<p>console.log(doubleAll(100));</p>
-								<p>// Passing functions as arguments</p>
-								<p>function doOperationOn(x, operation) {</p>
-								<p>return operation(x);</p>
-								<p>}</p>
-								<p>var result = doOperationOn(5, multiplyBy3);</p>
-								<p>console.log(result);</p>
-								<p>result = doOperationOn(100, doubleAll);</p>
-								<p>console.log(result);</p>
-							</div>
-						</div>
-						<div class="card mt-5 mb-4">
-							<div class="card-header">
-								<h4>7-Pass By Value and Pass By Reference</h4>
-							</div>
-							<div class="card-body">
-								<p>// Copy by Reference vs by Value</p>
-								<p>var numbera = 7;</p>
-								<p>var numberb = numbera;</p>
-								<p>console.log("a: " + numbera);</p>
-								<p>console.log("b: " + numberb);</p>
-								<p>numberb = 5;</p>
-								<p>console.log("after number b update:");</p>
-								<p>console.log("numbera: " + numbera);</p>
-								<p>console.log("numberb: " + numberb);</p>
-								<p>var objecta = { valuex: 100 };</p>
-								<p>var objectb = objecta;</p>
-								<p>console.log("passs by value:");</p>
-								<p>console.log(objecta);</p>
-								<p>console.log(objectb);</p>
-								<p>objectb.x = 5;</p>
-								<p>console.log("after objectb.x update:");</p>
-								<p>console.log(objecta);</p>
-								<p>console.log(objectb);</p>
-							</div>
-						</div>
-						<div class="card mt-5 mb-4">
-							<div class="card-header">
-								<h4>7-Pass By Value and Pass By Reference</h4>
-							</div>
-							<div class="card-body">
-								<p>// Pass by reference vs by value</p>
-								<p>function changePrimitive(primValue) {</p>
-								<p>console.log("in changePrimitive...");</p>
-								<p>console.log("before:");</p>
-								<p>console.log(primValue);</p>
+						<div class="col-md-3">
+							<ul class="list-group mt-5">
+								<li class="list-group-item"><a href="#first">1-console log</a> </li>
+								<li class="list-group-item"><a href="#two">2-Function Scope</a> </li>
+								<li class="list-group-item"><a href="#three">3-DataTypes</a>  </li>
+								<li class="list-group-item"><a href="#four">4-Default Values</a>  </li>
+								<li class="list-group-item"><a href="#five">5-Two way creation of object</a>  </li>
+								<li class="list-group-item"><a href="#six">6-Functions</a>  </li>
+								<li class="list-group-item"><a href="#seven">7-Pass by value and reference</a></li>
+								<li class="list-group-item"><a href="#eight">8-Functions Examples</a> </li>
+								<li class="list-group-item"><a href="#nine">9-Function constructors</a> </li>
+								<li class="list-group-item"><a href="#ten">10-Object literals and "this"</a> </li>
+								<li class="list-group-item"><a href="#eleven">11-Arrays</a> </li>
+								<li class="list-group-item"><a href="#twelve">12-Closures</a> </li>
+								<li class="list-group-item"><a href="#thirteen">13-Fake Namespace</a> </li>
+								<li class="list-group-item"><a href="#fourteen">14-IIFEs</a> </li>
+								<li class="list-group-item"><a href="#fifteen">15-DOM Manipulation</a> </li>
 								
-								<p>primValue = 5;</p>
-								<p>console.log("after:");</p>
-								<p>console.log(primValue);</p>
-								<p>}</p>
-								<p>var value = 7;</p>
-								<p>changePrimitive(value); // primValue = value</p>
-								<p>console.log("after changePrimitive, orig value:");</p>
-								<p>console.log(value);</p>
-								<p>function changeObject(objValue) {</p>
-								<p>console.log("in changeObject...");</p>
-								<p>console.log("before:");</p>
-								<p>console.log(objValue);</p>
-								
-								<p>objValue.x = 5;</p>
-								<p>console.log("after:");</p>
-								<p>console.log(objValue);</p>
-								<p>}</p>
-								<p>value = { x: 7 };</p>
-								<p>changeObject(value); // objValue = value</p>
-								<p>console.log("after changeObject, orig value:");</p>
-								<p>console.log(value);</p>
-								<p>function add(objectone){</p>
-								<p>objectone.x=20;</p>
-								<p>console.log("in function");</p>
-								<p>console.log(objectone);</p>
-								<p>}</p>
-								<p>var obj= {x:10};</p>
-								<p>console.log("before calling");</p>
-								<p>console.log(obj);</p>
-								<p>add(obj);</p>
-								<p>console.log("after exit");</p>
-								<p>console.log(obj);</p>
-							</div>
+							</ul>
 						</div>
-						<div class="card mt-5 mb-4">
-							<div class="card-header">
-								<h4>8-Function constructors</h4>
-							</div>
-							<div class="card-body">
-								<p>// Function constructors</p>
-								<p>function Square (length){</p>
-								<p>this.length=length;</p>
-								<p>}</p>
-								<p>Square.prototype.getArea=</p>
-								<p>function (){</p>
-								<p>return this.length* this.length;</p>
-								<p>};</p>
-								<p>var mysquare=new Square(10);</p>
-								<p>console.log(mysquare.getArea());</p>
-							</div>
-						</div>
-						<div class="card mt-5 mb-4">
-							<div class="card-header">
-								<h4>9-Object literals and "this"</h4>
-							</div>
-							<div class="card-body">
-								<p>// Object literals and "this"</p>
-								<p>var literalCircle = {</p>
-								<p>radius: 10,</p>
-								<p>getArea: function () {</p>
-								<p>var self = this;</p>
-								<p>console.log(this);</p>
-								<p>var increaseRadius = function () {</p>
-								<p>self.radius = 20;</p>
-								<p>};</p>
-								<p>increaseRadius();</p>
-								<p>console.log(this.radius);</p>
-								<p>return Math.PI * Math.pow(this.radius, 2);</p>
-								<p>}</p>
-								<p>};</p>
-								<p>console.log(literalCircle.getArea());</p>
-							</div>
-						</div>
+						
+						
+						
 					</div>
-					<div class="col-md-3">
-						<ul class="list-group mt-5">
-							<li class="list-group-item"> 1-console log  </li>
-							<li class="list-group-item"> 2-Function Scope </li>
-							<li class="list-group-item"> 3-DataTypes  </li>
-							<li class="list-group-item"> 4-Default Values </li>
-							<li class="list-group-item"> 5-Two way creation of object </li>
-							<li class="list-group-item"> 6-Functions </li>
-							<li class="list-group-item"> 7-Pass by value and reference</li>
-							<li class="list-group-item"> 8-Function constructors</li>
-							<li class="list-group-item"> 9-Object literals and "this"</li>
-							
-							
-						</ul>
-					</div>
-					
-					
-					
 				</div>
-			</div>
-		</section>
-		
-		<!-- Optional JavaScript -->
-		<!-- jQuery first, then Popper.js, then Bootstrap JS -->
-		<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
-		<script src="assets/js/custom.js"></script>
-	</body>
-</html>
+			</section>
+			
+			<!-- Optional JavaScript -->
+			<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+			<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+			<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+			<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+			<script src="assets/js/prism.js"></script>
+			<script src="assets/js/custom.js"></script>
+		</body>
+	</html>
